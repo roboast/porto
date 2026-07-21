@@ -1,638 +1,722 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Asti Dhiya Anzaria</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
-<style>
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asti Dhiya Anzaria</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;1,400&family=DM+Sans:wght@300;400;500&display=swap"
+          rel="stylesheet">
+    <style>
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
 
-:root {
-  --ink: #1c1c1c;
-  --ink-mid: #555;
-  --ink-faint: #999;
-  --border: #e8e8e4;
-  --surface: #fafaf8;
-  --accent: #3a6fa8;
-  --sans: 'DM Sans', system-ui, sans-serif;
-  --serif: 'Lora', Georgia, serif;
-  --col-left: 88px;
-  --gap: 28px;
-  --max: 640px;
-}
+        :root {
+            --ink: #1c1c1c;
+            --ink-mid: #555;
+            --ink-faint: #999;
+            --border: #e8e8e4;
+            --surface: #fafaf8;
+            --accent: #3a6fa8;
+            --sans: 'DM Sans', system-ui, sans-serif;
+            --serif: 'Lora', Georgia, serif;
+            --col-left: 88px;
+            --gap: 28px;
+            --max: 640px;
+        }
 
-html { scroll-behavior: smooth; }
+        html {
+            scroll-behavior: smooth;
+        }
 
-body {
-  font-family: var(--sans);
-  font-weight: 300;
-  font-size: 14px;
-  line-height: 1.65;
-  color: var(--ink);
-  background: var(--surface);
-  -webkit-font-smoothing: antialiased;
-}
+        body {
+            font-family: var(--sans);
+            font-weight: 300;
+            font-size: 14px;
+            line-height: 1.65;
+            color: var(--ink);
+            background: var(--surface);
+            -webkit-font-smoothing: antialiased;
+        }
 
-.page {
-  max-width: var(--max);
-  margin: 0 auto;
-  padding: 52px 28px 80px;
-}
+        .page {
+            max-width: var(--max);
+            margin: 0 auto;
+            padding: 52px 28px 80px;
+        }
 
-/* ── HEADER ── */
-.header {
-  display: flex;
-  align-items: center;
-  gap: 18px;
-  margin-bottom: 40px;
-}
+        /* ── HEADER ── */
+        .header {
+            display: flex;
+            align-items: center;
+            gap: 18px;
+            margin-bottom: 40px;
+        }
 
-.avatar {
-  width: 64px;
-  height: 64px;
-  border-radius: 50%;
-  background: #dde8f0;
-  flex-shrink: 0;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: var(--serif);
-  font-size: 1.4rem;
-  color: var(--accent);
-  font-style: italic;
-  letter-spacing: -0.02em;
-}
+        .avatar {
+            width: 64px;
+            height: 64px;
+            border-radius: 50%;
+            background: #dde8f0;
+            flex-shrink: 0;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: var(--serif);
+            font-size: 1.4rem;
+            color: var(--accent);
+            font-style: italic;
+            letter-spacing: -0.02em;
+        }
 
-.header-info {}
+        .header-info {
+        }
 
-.header-name {
-  font-family: var(--serif);
-  font-size: 1.25rem;
-  font-weight: 500;
-  color: var(--ink);
-  line-height: 1.2;
-  margin-bottom: 2px;
-}
+        .header-name {
+            font-family: var(--serif);
+            font-size: 1.25rem;
+            font-weight: 500;
+            color: var(--ink);
+            line-height: 1.2;
+            margin-bottom: 2px;
+        }
 
-.header-sub {
-  font-size: 0.82rem;
-  color: var(--ink-mid);
-  margin-bottom: 6px;
-}
+        .header-sub {
+            font-size: 0.82rem;
+            color: var(--ink-mid);
+            margin-bottom: 6px;
+        }
 
-.header-links {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 6px;
-}
+        .header-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+        }
 
-.header-chip {
-  font-size: 0.72rem;
-  color: var(--ink-mid);
-  background: #fff;
-  border: 1px solid var(--border);
-  border-radius: 20px;
-  padding: 2px 10px;
-  text-decoration: none;
-  transition: border-color 0.15s, color 0.15s;
-}
+        .header-chip {
+            font-size: 0.72rem;
+            color: var(--ink-mid);
+            background: #fff;
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            padding: 2px 10px;
+            text-decoration: none;
+            transition: border-color 0.15s, color 0.15s;
+        }
 
-.header-chip:hover {
-  border-color: #bbb;
-  color: var(--ink);
-}
+        .header-chip:hover {
+            border-color: #bbb;
+            color: var(--ink);
+        }
 
-/* ── SECTION ── */
-.section {
-  margin-bottom: 48px;
-}
+        /* ── SECTION ── */
+        .section {
+            margin-bottom: 48px;
+        }
 
-.section-title {
-  font-size: 0.78rem;
-  font-weight: 500;
-  color: var(--ink);
-  margin-bottom: 14px;
-  letter-spacing: 0.01em;
-}
+        .section-title {
+            font-size: 0.78rem;
+            font-weight: 500;
+            color: var(--ink);
+            margin-bottom: 14px;
+            letter-spacing: 0.01em;
+        }
 
-/* ── ABOUT ── */
-.about-text {
-  font-size: 0.88rem;
-  color: var(--ink-mid);
-  line-height: 1.7;
-  max-width: 520px;
-}
+        /* ── ABOUT ── */
+        .about-text {
+            font-size: 0.88rem;
+            color: var(--ink-mid);
+            line-height: 1.7;
+            max-width: 520px;
+        }
 
-/* ── ROW (timeline entry) ── */
-.row {
-  display: grid;
-  grid-template-columns: var(--col-left) 1fr;
-  gap: 0 var(--gap);
-  padding: 10px 0;
-  border-top: 1px solid var(--border);
-}
+        /* ── ROW (timeline entry) ── */
+        .row {
+            display: grid;
+            grid-template-columns: var(--col-left) 1fr;
+            gap: 0 var(--gap);
+            padding: 10px 0;
+            border-top: 1px solid var(--border);
+        }
 
-.row:last-child { border-bottom: 1px solid var(--border); }
+        .row:last-child {
+            border-bottom: 1px solid var(--border);
+        }
 
-.row-year {
-  font-size: 0.78rem;
-  color: var(--ink-faint);
-  padding-top: 1px;
-  white-space: nowrap;
-  font-variant-numeric: tabular-nums;
-}
+        .row-year {
+            font-size: 0.78rem;
+            color: var(--ink-faint);
+            padding-top: 1px;
+            white-space: nowrap;
+            font-variant-numeric: tabular-nums;
+        }
 
-.row-body {}
+        .row-body {
+        }
 
-.row-title {
-  font-size: 0.88rem;
-  font-weight: 400;
-  color: var(--ink);
-  display: inline;
-}
+        .row-title {
+            font-size: 0.88rem;
+            font-weight: 400;
+            color: var(--ink);
+            display: inline;
+        }
 
-.row-title a {
-  color: inherit;
-  text-decoration: none;
-}
+        .row-title a {
+            color: inherit;
+            text-decoration: none;
+        }
 
-.row-arrow {
-  display: inline-block;
-  font-size: 0.7rem;
-  color: var(--ink-faint);
-  margin-left: 4px;
-  transition: transform 0.15s, color 0.15s;
-}
+        .row-arrow {
+            display: inline-block;
+            font-size: 0.7rem;
+            color: var(--ink-faint);
+            margin-left: 4px;
+            transition: transform 0.15s, color 0.15s;
+        }
 
-.row:hover .row-arrow {
-  color: var(--accent);
-  transform: translate(2px, -2px);
-}
+        .row:hover .row-arrow {
+            color: var(--accent);
+            transform: translate(2px, -2px);
+        }
 
-.row-sub {
-  font-size: 0.8rem;
-  color: var(--ink-faint);
-  display: block;
-  margin-top: 1px;
-}
+        .row-sub {
+            font-size: 0.8rem;
+            color: var(--ink-faint);
+            display: block;
+            margin-top: 1px;
+        }
 
-.row-desc {
-  font-size: 0.8rem;
-  color: var(--ink-mid);
-  margin-top: 4px;
-  line-height: 1.6;
-}
+        .row-desc {
+            font-size: 0.8rem;
+            color: var(--ink-mid);
+            margin-top: 4px;
+            line-height: 1.6;
+        }
 
-/* ── TAGS ── */
-.row-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 4px;
-  margin-top: 8px;
-}
+        /* ── TAGS ── */
+        .row-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 4px;
+            margin-top: 8px;
+        }
 
-.tag {
-  font-size: 0.67rem;
-  color: var(--ink-faint);
-  border: 1px solid var(--border);
-  border-radius: 2px;
-  padding: 1px 6px;
-  background: #fff;
-}
+        .tag {
+            font-size: 0.67rem;
+            color: var(--ink-faint);
+            border: 1px solid var(--border);
+            border-radius: 2px;
+            padding: 1px 6px;
+            background: #fff;
+        }
 
-/* ── GIF CARD ── */
-.gif-card {
-  margin-top: 10px;
-  border: 1px solid var(--border);
-  border-radius: 6px;
-  overflow: hidden;
-  background: #fff;
-  max-width: 420px;
-  transition: border-color 0.15s;
-}
+        /* ── GIF CARD ── */
+        .gif-card {
+            margin-top: 10px;
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            overflow: hidden;
+            background: #fff;
+            width: 100%;
+            transition: border-color 0.15s;
+        }
 
-.gif-card:hover { border-color: #ccc; }
+        .gif-card:hover {
+            border-color: #ccc;
+        }
 
-.gif-card img {
-  width: 100%;
-  display: block;
-  aspect-ratio: 16/9;
-  object-fit: cover;
-}
+        .gif-card img {
+            width: 100%;
+            display: block;
+            height: auto;
+        }
 
-.gif-placeholder {
-  width: 100%;
-  aspect-ratio: 16/9;
-  background: #f3f3f0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 6px;
-}
+        .gif-placeholder {
+            width: 100%;
+            min-height: 200px;
+            background: #f3f3f0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+        }
 
-.gif-placeholder-icon {
-  width: 28px;
-  height: 28px;
-  border-radius: 50%;
-  border: 1.5px dashed #ccc;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+        .gif-placeholder-icon {
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            border: 1.5px dashed #ccc;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
 
-.gif-placeholder-text {
-  font-size: 0.67rem;
-  color: #bbb;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  font-weight: 500;
-}
+        .gif-placeholder-text {
+            font-size: 0.67rem;
+            color: #bbb;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            font-weight: 500;
+        }
 
-.gif-placeholder-filename {
-  font-size: 0.63rem;
-  color: #ccc;
-  font-family: monospace;
-}
+        .gif-placeholder-filename {
+            font-size: 0.63rem;
+            color: #ccc;
+            font-family: monospace;
+        }
 
-.gif-caption {
-  padding: 8px 12px;
-  font-size: 0.75rem;
-  color: var(--ink-mid);
-  border-top: 1px solid var(--border);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
+        .gif-caption {
+            padding: 8px 12px;
+            font-size: 0.75rem;
+            color: var(--ink-mid);
+            border-top: 1px solid var(--border);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
 
-.gif-caption-sub {
-  font-size: 0.7rem;
-  color: var(--ink-faint);
-}
+        .gif-caption-sub {
+            font-size: 0.7rem;
+            color: var(--ink-faint);
+        }
 
-/* ── CONTACT ── */
-.contact-grid {
-  display: grid;
-  gap: 0;
-}
+        /* ── CONTACT ── */
+        .contact-grid {
+            display: grid;
+            gap: 0;
+        }
 
-.contact-row {
-  display: grid;
-  grid-template-columns: var(--col-left) 1fr;
-  gap: 0 var(--gap);
-  padding: 7px 0;
-  border-top: 1px solid var(--border);
-}
+        .contact-row {
+            display: grid;
+            grid-template-columns: var(--col-left) 1fr;
+            gap: 0 var(--gap);
+            padding: 7px 0;
+            border-top: 1px solid var(--border);
+        }
 
-.contact-row:last-child { border-bottom: 1px solid var(--border); }
+        .contact-row:last-child {
+            border-bottom: 1px solid var(--border);
+        }
 
-.contact-label {
-  font-size: 0.78rem;
-  color: var(--ink-faint);
-}
+        .contact-label {
+            font-size: 0.78rem;
+            color: var(--ink-faint);
+        }
 
-.contact-value a {
-  font-size: 0.82rem;
-  color: var(--ink);
-  text-decoration: none;
-  display: inline-flex;
-  align-items: center;
-  gap: 3px;
-}
+        .contact-value a {
+            font-size: 0.82rem;
+            color: var(--ink);
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 3px;
+        }
 
-.contact-value a:hover { color: var(--accent); }
+        .contact-value a:hover {
+            color: var(--accent);
+        }
 
-.contact-arrow {
-  font-size: 0.65rem;
-  color: var(--ink-faint);
-}
+        .contact-arrow {
+            font-size: 0.65rem;
+            color: var(--ink-faint);
+        }
 
-/* ── FOOTER ── */
-footer {
-  margin-top: 60px;
-  padding-top: 20px;
-  border-top: 1px solid var(--border);
-  font-size: 0.72rem;
-  color: var(--ink-faint);
-}
+        /* ── FOOTER ── */
+        footer {
+            margin-top: 60px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border);
+            font-size: 0.72rem;
+            color: var(--ink-faint);
+        }
 
-@media (max-width: 480px) {
-  :root { --col-left: 64px; --gap: 16px; }
-  .page { padding: 36px 20px 60px; }
-  .header { gap: 14px; }
-  .avatar { width: 52px; height: 52px; font-size: 1.1rem; }
-}
-</style>
+        @media (max-width: 480px) {
+            :root {
+                --col-left: 64px;
+                --gap: 16px;
+            }
+
+            .page {
+                padding: 36px 20px 60px;
+            }
+
+            .header {
+                gap: 14px;
+            }
+
+            .avatar {
+                width: 52px;
+                height: 52px;
+                font-size: 1.1rem;
+            }
+        }
+
+        .status {
+            font-size: 0.68rem;
+            font-weight: 500;
+            letter-spacing: 0.05em;
+            padding: 2px 7px;
+            border-radius: 2px;
+            margin-left: 8px;
+            vertical-align: middle;
+        }
+
+        .status-done {
+            background: #eaf3de;
+            color: #3b6d11;
+        }
+
+        .status-wip {
+            background: #faeeda;
+            color: #854f0b;
+        }
+
+        .status-upcoming {
+            background: #f1efe8;
+            color: #5f5e5a;
+        }
+    </style>
 </head>
 <body>
 <div class="page">
 
-  <!-- HEADER -->
-  <div class="header">
-    <div class="avatar">A</div>
-    <div class="header-info">
-      <div class="header-name">Asti Dhiya Anzaria</div>
-      <div class="header-sub">Asti (she/her) · AI/ML Engineer, Android Engineer &amp; Researcher · Indonesia</div>
-      <div class="header-links">
-        <a href="https://github.com/roboast" target="_blank" class="header-chip">github.com/roboast ↗</a>
-        <a href="https://linkedin.com/in/astidhiyaa" target="_blank" class="header-chip">linkedin ↗</a>
-        <a href="mailto:astidhiyaanzaria@gmail.com" class="header-chip">email ↗</a>
-        <a href="#" onclick="alert('Available soon!')" class="header-chip">download cv ↗</a>
-      </div>
-    </div>
-  </div>
-
-  <!-- ABOUT -->
-  <div class="section">
-    <div class="section-title">About</div>
-    <p class="about-text">
-      Software engineer and researcher building applied AI/ML systems — RAG pipelines, NLP recommendation engines, and agentic LLM workflows. 3+ years of production Android engineering at Tokopedia. MSc in Advanced Computer Science (Merit) from the University of Sheffield on a full LPDP government scholarship. Research interests sit at the intersection of AI, digital governance, and public infrastructure.
-    </p>
-  </div>
-
-  <!-- PROJECTS -->
-  <div class="section">
-    <div class="section-title">Projects</div>
-
-    <div class="row">
-      <div class="row-year">2025</div>
-      <div class="row-body">
-        <span class="row-title">
-          <a href="https://github.com/roboast" target="_blank">RAG Pipeline — Indonesian Policy Documents</a>
-        </span>
-        <span class="row-arrow">↗</span>
-        <span class="row-sub">End-to-end semantic Q&amp;A over government documents</span>
-        <div class="gif-card">
-          <!-- To add GIF: replace the gif-placeholder div below with:
-               <img src="gifs/rag-pipeline.gif" alt="RAG Pipeline demo"> -->
-          <img src="kdrama-persona.gif">
-          <div class="gif-caption">
-            <span>RAG Pipeline demo</span>
-            <span class="gif-caption-sub">LangChain · ChromaDB · Groq</span>
-          </div>
-        </div>
-        <div class="row-tags">
-          <span class="tag">LangChain</span>
-          <span class="tag">ChromaDB</span>
-          <span class="tag">Groq</span>
-          <span class="tag">Python</span>
-        </div>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="row-year">2025</div>
-      <div class="row-body">
-        <span class="row-title">
-          <a href="https://github.com/roboast" target="_blank">Mood-Based Food Recommendation</a>
-        </span>
-        <span class="row-arrow">↗</span>
-        <span class="row-sub">NLP engine mapping mood inputs to food suggestions</span>
-        <div class="gif-card">
-          <!-- To add GIF: replace the gif-placeholder div below with:
-               <img src="gifs/mood-food.gif" alt="Mood Food demo"> -->
-          <div class="gif-placeholder">
-            <div class="gif-placeholder-icon">
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#ccc" stroke-width="2" stroke-linecap="round"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+    <!-- HEADER -->
+    <div class="header">
+        <div class="avatar">A</div>
+        <div class="header-info">
+            <div class="header-name">Asti Dhiya Anzaria</div>
+            <div class="header-sub">Asti (she/her) · AI/ML Engineer, Android Engineer &amp; Researcher · Indonesia</div>
+            <div class="header-links">
+                <a href="https://github.com/roboast" target="_blank" class="header-chip">github.com/roboast ↗</a>
+                <a href="https://linkedin.com/in/astidhiyaa" target="_blank" class="header-chip">linkedin ↗</a>
+                <a href="mailto:astidhiyaanzaria@gmail.com" class="header-chip">email ↗</a>
             </div>
-            <div class="gif-placeholder-text">GIF</div>
-            <div class="gif-placeholder-filename">mood-food.gif</div>
-          </div>
-          <div class="gif-caption">
-            <span>Mood Food demo</span>
-            <span class="gif-caption-sub">HuggingFace · ChromaDB · Sentence Transformers</span>
-          </div>
         </div>
-        <div class="row-tags">
-          <span class="tag">HuggingFace</span>
-          <span class="tag">Sentence Transformers</span>
-          <span class="tag">ChromaDB</span>
-          <span class="tag">Python</span>
-        </div>
-      </div>
     </div>
 
-    <div class="row">
-      <div class="row-year">2025</div>
-      <div class="row-body">
-        <span class="row-title">
-          <a href="https://github.com/roboast" target="_blank">LangGraph Autonomous Agent</a>
-        </span>
-        <span class="row-arrow">↗</span>
-        <span class="row-sub">Stateful, branching agentic LLM workflow with tool use</span>
-        <div class="gif-card">
-          <!-- To add GIF: replace the gif-placeholder div below with:
-               <img src="gifs/langgraph-agent.gif" alt="LangGraph Agent demo"> -->
-          <div class="gif-placeholder">
-            <div class="gif-placeholder-icon">
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#ccc" stroke-width="2" stroke-linecap="round"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+    <!-- ABOUT -->
+    <div class="section">
+        <div class="section-title">About</div>
+        <p class="about-text">
+            Software engineer and researcher building applied ML systems, RAG pipelines, and agentic LLM workflows.
+            Currently working at GIZ to drive responsible AI adoption and digital innovation in public finance and tax
+            administration, in collaboration with Indonesia’s Ministry of Finance (MoF). Former software engineer at
+            Tokopedia (3+ years) and MSc Advanced Computer Science @ University of Sheffield, UK (LPDP Alumni).
+            Passionate about the intersection of AI, digital governance, and sustainable public infrastructure.
+        </p>
+    </div>
+
+    <!-- WORK EXPERIENCE -->
+    <div class="section">
+        <div class="section-title">Work Experience</div>
+
+        <div class="row">
+            <div class="row-year">2026 — present</div>
+            <div class="row-body">
+                <span class="row-title">Jr. AI & Digitalization Advisor at Deutsche Gesellschaft für Internationale Zusammenarbeit GmbH (GIZ)</span>
+                <span class="row-sub">Jakarta, Indonesia</span>
+                <div class="row-desc">Bridging technology, policy, and sustainable development with MoF. Focused on
+                    shaping digital innovation strategies and driving AI adoption within tax administration and fiscal
+                    policy frameworks.
+                </div>
             </div>
-            <div class="gif-placeholder-text">GIF</div>
-            <div class="gif-placeholder-filename">langgraph-agent.gif</div>
-          </div>
-          <div class="gif-caption">
-            <span>Agent workflow demo</span>
-            <span class="gif-caption-sub">LangGraph · Python</span>
-          </div>
         </div>
-        <div class="row-tags">
-          <span class="tag">LangGraph</span>
-          <span class="tag">LLM Tool Use</span>
-          <span class="tag">Python</span>
-        </div>
-      </div>
-    </div>
 
-    <div class="row">
-      <div class="row-year">2025</div>
-      <div class="row-body">
-        <span class="row-title">
-          <a href="https://github.com/roboast" target="_blank">K-Drama Sentiment Analysis</a>
-        </span>
-        <span class="row-arrow">↗</span>
-        <span class="row-sub">BERT/RoBERTa fine-tuning on MyDramaList review data</span>
-        <div class="gif-card">
-          <!-- To add GIF: replace the gif-placeholder div below with:
-               <img src="gifs/kdrama-sentiment.gif" alt="K-Drama Sentiment demo"> -->
-          <div class="gif-placeholder">
-            <div class="gif-placeholder-icon">
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#ccc" stroke-width="2" stroke-linecap="round"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+        <div class="row">
+            <div class="row-year">2021 — 2024</div>
+            <div class="row-body">
+                <span class="row-title">Software Engineer, Android at Tokopedia </span>
+                <span class="row-sub">Jakarta, Indonesia</span>
+                <div class="row-desc">Delivered features across Travel, Digital Products, Live-Streaming, and Stories
+                    for tens of millions of users. Eliminated critical memory leaks, built multi-layer test
+                    architecture, automated OKR reporting with Python + AppScript.
+                </div>
             </div>
-            <div class="gif-placeholder-text">GIF</div>
-            <div class="gif-placeholder-filename">kdrama-sentiment.gif</div>
-          </div>
-          <div class="gif-caption">
-            <span>Sentiment dashboard demo</span>
-            <span class="gif-caption-sub">BERT · RoBERTa · HuggingFace</span>
-          </div>
         </div>
-        <div class="row-tags">
-          <span class="tag">BERT</span>
-          <span class="tag">RoBERTa</span>
-          <span class="tag">HuggingFace</span>
-          <span class="tag">Python</span>
-        </div>
-      </div>
-    </div>
 
-    <div class="row">
-      <div class="row-year">2025</div>
-      <div class="row-body">
-        <span class="row-title">
-          <a href="https://github.com/roboast" target="_blank">MSc Dissertation — Digital Gov Authentication</a>
-        </span>
-        <span class="row-arrow">↗</span>
-        <span class="row-sub">Usability &amp; environmental evaluation of government auth flows</span>
-        <div class="gif-card">
-          <!-- To add GIF: replace the gif-placeholder div below with:
-               <img src="gifs/dissertation-app.gif" alt="Dissertation app demo"> -->
-          <div class="gif-placeholder">
-            <div class="gif-placeholder-icon">
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#ccc" stroke-width="2" stroke-linecap="round"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+        <div class="row">
+            <div class="row-year">2020</div>
+            <div class="row-body">
+                <span class="row-title">Android Engineer Intern (DANApprentech) at DANA Indonesia</span>
+                <span class="row-sub">Jakarta, Indonesia</span>
+                <div class="row-desc">Built production-grade Android features in a regulated fintech environment using
+                    MVP-Clean Architecture (Dagger2, Retrofit, RxJava).
+                </div>
             </div>
-            <div class="gif-placeholder-text">GIF</div>
-            <div class="gif-placeholder-filename">dissertation-app.gif</div>
-          </div>
-          <div class="gif-caption">
-            <span>Android prototype demo</span>
-            <span class="gif-caption-sub">Android · Mixed-methods research</span>
-          </div>
         </div>
-        <div class="row-tags">
-          <span class="tag">Android</span>
-          <span class="tag">Usability Research</span>
-          <span class="tag">Digital Gov</span>
+
+    </div>
+
+    <!-- TEACHING -->
+    <div class="section">
+        <div class="section-title">Additional Experience</div>
+
+        <div class="row">
+            <div class="row-year">2025 — present</div>
+            <div class="row-body">
+                <span class="row-title">Research Fellow &amp; Co-lead at Mata Garuda Institute</span>
+                <span class="row-sub">Digital Governance, Technology &amp; Innovation Cluster · LPDP Alumni</span>
+                <div class="row-desc">Co-leads a research cluster identifying digital governance and AI policy issues,
+                    facilitating knowledge-sharing sessions across the LPDP alumni network.
+                </div>
+            </div>
         </div>
-      </div>
+
+        <div class="row">
+            <div class="row-year">2026</div>
+            <div class="row-body">
+                <span class="row-title">Trainer for Design Thinking</span>
+                <span class="row-sub">PIDI X DIGDAYA Hackathon 2026</span>
+                <div class="row-desc">Facilitated workshops from problem framing and user empathy to rapid prototyping,
+                    helping teams transform complex economic and tech challenges into scalable, real-world digital
+                    solutions.
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="row-year">2022 — 2024</div>
+            <div class="row-body">
+                <span class="row-title">Instructor &amp; Mentor, Bangkit Academy</span>
+                <span class="row-sub">by Google, GoTo, Traveloka · Indonesia</span>
+                <div class="row-desc">Instructed 50+ students in Android development and AI/ML. Supervised final project
+                    teams from prototype to demo day.
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="row-year">2024</div>
+            <div class="row-body">
+                <span class="row-title">Android Mentor, GenerationGirl Summer Club</span>
+                <span class="row-sub">Indonesia</span>
+                <div class="row-desc">Designed and delivered a one-week Android front-end workshop for secondary school
+                    students with 1:1 mentorship.
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="row-year">2023</div>
+            <div class="row-body">
+                <span class="row-title">Speaker (Android), GoTo DevCamp </span>
+                <span class="row-sub">Jakarta, Indonesia</span>
+                <span class="row-sub">Android testing workshop for engineering cohorts</span>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="row-year">2022</div>
+            <div class="row-body">
+                <span class="row-title">Instructor, Tokopedia Academy</span>
+                <span class="row-sub">Indonesia</span>
+                <span class="row-desc">Multi-layer Android testing strategy (unit + instrumentation)</span>
+            </div>
+        </div>
+
     </div>
 
-  </div>
+    <!-- EDUCATION -->
+    <div class="section">
+        <div class="section-title">Education</div>
 
-  <!-- WORK EXPERIENCE -->
-  <div class="section">
-    <div class="section-title">Work Experience</div>
+        <div class="row">
+            <div class="row-year">2024 — 2025</div>
+            <div class="row-body">
+                <span class="row-title">MSc Advanced Computer Science (Merit)</span>
+                <span class="row-sub">University of Sheffield · Full LPDP Government Scholarship</span>
+                <div class="row-desc">Dissertation: Usability and Environmental Evaluation of User Authentication for
+                    Digital Government Services.
+                </div>
+            </div>
+        </div>
 
-    <div class="row">
-      <div class="row-year">2025 — Now</div>
-      <div class="row-body">
-        <span class="row-title">Research Fellow &amp; Co-lead at Mata Garuda Institute</span>
-        <span class="row-sub">Digital Governance, Technology &amp; Innovation Cluster · LPDP Alumni</span>
-        <div class="row-desc">Co-leads a research cluster identifying digital governance and AI policy issues, facilitating knowledge-sharing sessions across the LPDP alumni network.</div>
-      </div>
+        <div class="row">
+            <div class="row-year">2016 — 2020</div>
+            <div class="row-body">
+                <span class="row-title">S.Kom — Informatics Engineering (GPA 3.66/4.00)</span>
+                <span class="row-sub">Universitas Brawijaya · Specialisation: Mobile, Multimedia &amp; Games</span>
+                <div class="row-desc">Thesis: Mood-based culinary recommendation app — end-to-end Android development
+                    from concept to deployment.
+                </div>
+            </div>
+        </div>
+
     </div>
 
-    <div class="row">
-      <div class="row-year">2021 — 2024</div>
-      <div class="row-body">
-        <span class="row-title">Software Engineer, Android at Tokopedia </span>
-        <span class="row-sub">Jakarta, Indonesia</span>
-        <div class="row-desc">Delivered features across Travel, Digital Products, Live-Streaming, and Stories for tens of millions of users. Eliminated critical memory leaks, built multi-layer test architecture, automated OKR reporting with Python + AppScript.</div>
-      </div>
+    <!-- PROJECTS -->
+    <div class="section">
+        <div class="section-title">Projects</div>
+
+        <div class="row">
+            <div class="row-year">2026</div>
+            <div class="row-body">
+        <span class="row-title">
+          <a href="https://huggingface.co/spaces/roboast/asian-drama-persona-ig" target="_blank">Asian drama persona based on photos</a>
+        </span>
+                <span class="status status-done">done</span>
+                <a href="https://huggingface.co/spaces/roboast/asian-drama-persona-ig" target="_blank"
+                   class="header-chip"
+                   style="font-size:0.68rem; padding:2px 8px; margin-left:6px; vertical-align:middle;">try it ↗</a>
+                <span class="row-sub">Drop your selfie into a CLIP model and find the drama universe you were always meant to be in.</span>
+                <div class="gif-card">
+                    <img src="gif-asian-persona.gif">
+                    <div class="gif-caption">
+                        <span class="gif-caption-sub">What is your K/C-drama persona based on your Instagram?*</span>
+                    </div>
+                </div>
+                <div class="row-tags">
+                    <span class="tag">CLIP (ViT-B/32)</span>
+                    <span class="tag">LangChain</span>
+                    <span class="tag">ChromaDB</span>
+                    <span class="tag">Gradio</span>
+                    <span class="tag">Gemini</span>
+                    <span class="tag">Python</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="row-year">2026</div>
+            <div class="row-body">
+        <span class="row-title">
+          <a href="https://huggingface.co/spaces/roboast/moody-ldn-food"
+             target="_blank">Mood-based food recs in London</a>
+        </span>
+                <span class="status status-done">done</span>
+                <a href="https://huggingface.co/spaces/roboast/moody-ldn-food" target="_blank" class="header-chip"
+                   style="font-size:0.68rem; padding:2px 8px; margin-left:6px; vertical-align:middle;">try it ↗</a>
+                <span class="row-sub">Tell the app you're "feeling blue," it finds comfort food. Built with RAG, Pinecone & Gemini to match emotional queries to restaurant atmospheres. No more scrolling, just eating. Modern upgrade to my 2019 mood-based recommender.
+</span>
+                <div class="gif-card">
+                    <img src="gif-moddy-ldn.gif">
+                    <div class="gif-caption">
+                        <span class="gif-caption-sub">Tell me how you are feeling right now. </span>
+                    </div>
+                </div>
+                <div class="row-tags">
+                    <span class="tag">Sentiment Analysis</span>
+                    <span class="tag">Pinecone</span>
+                    <span class="tag">LangChain</span>
+                    <span class="tag">BERT</span>
+                    <span class="tag">Python</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="row-year">2026</div>
+            <div class="row-body">
+        <span class="row-title">
+          <a href="https://github.com/roboast/tayswiftcolour/blob/main/tay_swift_colour.ipynb" target="_blank">TaySwift audio aura</a>
+        </span>
+                <span class="status status-done">done</span>
+                <a href="https://github.com/roboast/tayswiftcolour/blob/main/tay_swift_colour.ipynb" target="_blank"
+                   class="header-chip"
+                   style="font-size:0.68rem; padding:2px 8px; margin-left:6px; vertical-align:middle;">try it ↗</a>
+                <span class="row-sub">Ever wondered what colour your favourite Taylor song would actually be? I turned Spotify audio features into 4 distinct “Audio Auras” to map the sonic DNA of her entire discography. </span>
+                <div class="gif-card">
+                    <img src="img_lavender_haze.png">
+                    <div class="gif-caption">
+                        <span class="gif-caption-sub">Inspired by Spotify Wrapped Audio Aura, but make it swifties.</span>
+                    </div>
+                </div>
+                <div class="row-tags">
+                    <span class="tag">Python</span>
+                    <span class="tag">scikit-learn</span>
+                    <span class="tag">K-means</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="row-year">2019</div>
+            <div class="row-body">
+        <span class="row-title">
+          <a href="" target="_blank">Mood based food recs in Malang</a>
+        </span>
+                <span class="status status-done">done</span>
+                <a href="https://j-ptiik.ub.ac.id/index.php/j-ptiik/article/view/6471" target="_blank"
+                   class="header-chip"
+                   style="font-size:0.68rem; padding:2px 8px; margin-left:6px; vertical-align:middle;">find the journal
+                    here ↗</a>
+                <span class="row-sub">Built an Android app that reads your face and tells you what to eat. Sad? Comfort food. Happy? Healthy vibes. Azure Face API + Certainty Factor = 79.4% accuracy, 83 SUS score. No more "idk what to eat" crises.
+</span>
+                <div class="row-tags">
+                    <span class="tag">Azure</span>
+                    <span class="tag">Google Maps</span>
+                    <span class="tag">Certainty Factor</span>
+                    <span class="tag">Android</span>
+                    <span class="tag">Java · Python</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="row-year">2026</div>
+            <div class="row-body">
+        <span class="row-title">
+          <a href="https://github.com/roboast" target="_blank">What drama that keeps you awake during Covid-19?</a>
+        </span>
+                <span class="status status-wip">in progress</span>
+                <span class="row-sub">Analysed user reviews + drama metadata to uncover emotional trends in K-dramas during 2020-2022.
+
+</span>
+                <div class="row-tags">
+                    <span class="tag">Sentiment Analysis</span>
+                    <span class="tag">NLP</span>
+                    <span class="tag">BERT</span>
+                    <span class="tag">Python</span>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="row-year">2026</div>
+            <div class="row-body">
+        <span class="row-title">
+          <a href="" target="_blank">What Spotify song are you based on your heartbeat?</a>
+        </span>
+                <span class="status status-upcoming">upcoming</span>
+                <span class="row-sub">Heartbeat, classify emotion, find a matching song in Spotify. A real-time system that recommends songs based on your physiological state. Because sometimes you need BPM that matches your BPM.
+</span>
+                <div class="row-tags">
+                    <span class="tag">Spotify</span>
+                    <span class="tag">Camera (PPG)</span>
+                    <span class="tag">Python</span>
+                </div>
+            </div>
+        </div>
     </div>
 
-    <div class="row">
-      <div class="row-year">2020</div>
-      <div class="row-body">
-        <span class="row-title">Android Engineer Intern (DANApprentech) at DANA Indonesia</span>
-        <span class="row-sub">Jakarta, Indonesia</span>
-        <div class="row-desc">Built production-grade Android features in a regulated fintech environment using MVP-Clean Architecture (Dagger2, Retrofit, RxJava).</div>
-      </div>
+    <!-- CONTACT -->
+    <div class="section">
+        <div class="section-title">Contact</div>
+        <div class="contact-grid">
+            <div class="contact-row">
+                <div class="contact-label">Email</div>
+                <div class="contact-value"><a href="mailto:astidhiyaanzaria@gmail.com">astidhiyaanzaria@gmail.com <span
+                        class="contact-arrow">↗</span></a></div>
+            </div>
+            <div class="contact-row">
+                <div class="contact-label">GitHub</div>
+                <div class="contact-value"><a href="https://github.com/roboast" target="_blank">github.com/roboast <span
+                        class="contact-arrow">↗</span></a></div>
+            </div>
+            <div class="contact-row">
+                <div class="contact-label">LinkedIn</div>
+                <div class="contact-value"><a href="https://linkedin.com/in/astidhiyaa" target="_blank">linkedin.com/in/astidhiyaa
+                    <span class="contact-arrow">↗</span></a></div>
+            </div>
+        </div>
     </div>
 
-  </div>
-
-  <!-- TEACHING -->
-  <div class="section">
-    <div class="section-title">Additional Experience</div>
-
-    <div class="row">
-      <div class="row-year">2022 — 2024</div>
-      <div class="row-body">
-        <span class="row-title">Instructor &amp; Mentor, Bangkit Academy</span>
-        <span class="row-sub">by Google, GoTo, Traveloka · Indonesia</span>
-        <div class="row-desc">Instructed 50+ students in Android development and AI/ML. Supervised final project teams from prototype to demo day.</div>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="row-year">2024</div>
-      <div class="row-body">
-        <span class="row-title">Android Mentor, GenerationGirl Summer Club</span>
-        <span class="row-sub">Indonesia</span>
-        <div class="row-desc">Designed and delivered a one-week Android front-end workshop for secondary school students with 1:1 mentorship.</div>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="row-year">2023</div>
-      <div class="row-body">
-        <span class="row-title">Speaker (Android), GoTo DevCamp </span>
-        <span class="row-sub">Multi-layer Android testing strategy (unit + instrumentation)</span>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="row-year">2022</div>
-      <div class="row-body">
-        <span class="row-title">Instructor, Tokopedia Academy</span>
-        <span class="row-sub">Android testing workshop for engineering cohorts</span>
-      </div>
-    </div>
-
-  </div>
-
-  <!-- EDUCATION -->
-  <div class="section">
-    <div class="section-title">Education</div>
-
-    <div class="row">
-      <div class="row-year">2024 — 2025</div>
-      <div class="row-body">
-        <span class="row-title">MSc Advanced Computer Science (Merit)</span>
-        <span class="row-sub">University of Sheffield · Full LPDP Government Scholarship</span>
-        <div class="row-desc">Dissertation: Usability and Environmental Evaluation of User Authentication for Digital Government Services.</div>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="row-year">2016 — 2020</div>
-      <div class="row-body">
-        <span class="row-title">S.Kom — Informatics Engineering, (GPA 3.66/4.00)</span>
-        <span class="row-sub">Universitas Brawijaya · Specialisation: Mobile, Multimedia &amp; Games</span>
-        <div class="row-desc">Thesis: Mood-based culinary recommendation app — end-to-end Android development from concept to deployment.</div>
-      </div>
-    </div>
-
-  </div>
-
-  <!-- CONTACT -->
-  <div class="section">
-    <div class="section-title">Contact</div>
-    <div class="contact-grid">
-      <div class="contact-row">
-        <div class="contact-label">Email</div>
-        <div class="contact-value"><a href="mailto:astidhiyaanzaria@gmail.com">astidhiyaanzaria@gmail.com <span class="contact-arrow">↗</span></a></div>
-      </div>
-      <div class="contact-row">
-        <div class="contact-label">GitHub</div>
-        <div class="contact-value"><a href="https://github.com/roboast" target="_blank">github.com/roboast <span class="contact-arrow">↗</span></a></div>
-      </div>
-      <div class="contact-row">
-        <div class="contact-label">LinkedIn</div>
-        <div class="contact-value"><a href="https://linkedin.com/in/astidhiyaa" target="_blank">linkedin.com/in/astidhiyaa <span class="contact-arrow">↗</span></a></div>
-      </div>
-      <div class="contact-row">
-        <div class="contact-label">CV</div>
-        <div class="contact-value"><a href="#" onclick="alert('Available soon!')">Download CV <span class="contact-arrow">↗</span></a></div>
-      </div>
-    </div>
-  </div>
-
-  <footer>© 2025 astidhiyaa</footer>
+    <footer>© 2025 astidhiyaa</footer>
 
 </div>
 </body>
